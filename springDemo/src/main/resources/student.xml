@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	
+	<bean id="stu1" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="101"></property>
+		<property name="name" value="Gopi"></property>
+		<property name="department" ref="dept1"></property>
+		<property name="city" value="Panruti"></property>
+		<property name="age" value="21"></property>
+		<property name="contactNumber" value="7869453613"></property>
+		<property name="emailId" value="gopi@email.com"></property>
+	</bean>
+	
+	<bean id="stu2" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="102"></property>
+		<property name="name" value="Rex"></property>
+		<property name="department" ref="dept1"></property>
+		<property name="city" value="Panruti"></property>
+		<property name="age" value="20"></property>
+		<property name="contactNumber" value="7869453614"></property>
+		<property name="emailId" value="rex@email.com"></property>
+	</bean>
+	
+	<bean id="stu3" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="201"></property>
+		<property name="name" value="Vicky"></property>
+		<property name="department" ref="dept2"></property>
+		<property name="city" value="T.V.Nallur"></property>
+		<property name="age" value="20"></property>
+		<property name="contactNumber" value="7869453615"></property>
+		<property name="emailId" value="vicky@email.com"></property>
+	</bean>
+	
+	<bean id="stu4" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="202"></property>
+		<property name="name" value="Kesavan"></property>
+		<property name="department" ref="dept2"></property>
+		<property name="city" value="Villupuram"></property>
+		<property name="age" value="21"></property>
+		<property name="contactNumber" value="7869453616"></property>
+		<property name="emailId" value="kesavan@email.com"></property>
+	</bean>
+	
+	<bean id="stu5" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="301"></property>
+		<property name="name" value="Barath"></property>
+		<property name="department" ref="dept3"></property>
+		<property name="city" value="Panruti"></property>
+		<property name="age" value="20"></property>
+		<property name="contactNumber" value="7869453617"></property>
+		<property name="emailId" value="barath@email.com"></property>
+	</bean>
+	
+	<bean id="stu6" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="302"></property>
+		<property name="name" value="Jawed"></property>
+		<property name="department" ref="dept3"></property>
+		<property name="city" value="Villupuram"></property>
+		<property name="age" value="21"></property>
+		<property name="contactNumber" value="7869453618"></property>
+		<property name="emailId" value="jawed@email.com"></property>
+	</bean>
+	
+	<bean id="stu7" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="401"></property>
+		<property name="name" value="Mani"></property>
+		<property name="department" ref="dept4"></property>
+		<property name="city" value="Cuddalore"></property>
+		<property name="age" value="21"></property>
+		<property name="contactNumber" value="7869453619"></property>
+		<property name="emailId" value="mani@email.com"></property>
+	</bean>
+	
+	<bean id="stu8" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="402"></property>
+		<property name="name" value="Gaja"></property>
+		<property name="department" ref="dept4"></property>
+		<property name="city" value="Panruti"></property>
+		<property name="age" value="20"></property>
+		<property name="contactNumber" value="7869453620"></property>
+		<property name="emailId" value="gaja@email.com"></property>
+	</bean>
+	
+	<bean id="stu9" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="501"></property>
+		<property name="name" value="Hari"></property>
+		<property name="department" ref="dept5"></property>
+		<property name="city" value="Perambalur"></property>
+		<property name="age" value="20"></property>
+		<property name="contactNumber" value="7869453621"></property>
+		<property name="emailId" value="hari@email.com"></property>
+	</bean>
+	
+	<bean id="stu10" class = "com.tnsif.springProjectOne.Student">
+		<property name="id" value="502"></property>
+		<property name="name" value="Narayana"></property>
+		<property name="department" ref="dept5"></property>
+		<property name="city" value="Mannarkudi"></property>
+		<property name="age" value="22"></property>
+		<property name="contactNumber" value="7869453622"></property>
+		<property name="emailId" value="narayana@email.com"></property>
+	</bean>
+	
+	<bean id="dept1" class="com.tnsif.springProjectOne.Department">
+		<property name="departmentName" value="DS Department"></property>
+		<property name="studentList">
+			<list>
+				<ref bean="stu1"/>
+				<ref bean="stu2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="dept2" class="com.tnsif.springProjectOne.Department">
+		<property name="departmentName" value="ML Department"></property>
+		<property name="studentList">
+			<list>
+				<ref bean="stu3"/>
+				<ref bean="stu4"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="dept3" class="com.tnsif.springProjectOne.Department">
+		<property name="departmentName" value="CSE Department"></property>
+		<property name="studentList">
+			<list>
+				<ref bean="stu5"/>
+				<ref bean="stu6"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="dept4" class="com.tnsif.springProjectOne.Department">
+		<property name="departmentName" value="ECE Department"></property>
+		<property name="studentList">
+			<list>
+				<ref bean="stu7"/>
+				<ref bean="stu8"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="dept5" class="com.tnsif.springProjectOne.Department">
+		<property name="departmentName" value="EEE Department"></property>
+		<property name="studentList">
+			<list>
+				<ref bean="stu9"/>
+				<ref bean="stu10"/>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean id="college" class="com.tnsif.springProjectOne.College">
+		<property name="collegeName" value="IFET COLLEGE OF ENGINEERING"></property>
+		<property name="departmentList">
+			<list>
+				<ref bean="dept1"/>
+				<ref bean="dept2"/>
+				<ref bean="dept3"/>
+				<ref bean="dept4"/>
+				<ref bean="dept5"/>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
